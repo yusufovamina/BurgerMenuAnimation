@@ -1,0 +1,29 @@
+﻿<Window x:Class="BurgerMenuAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BurgerMenuAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FFE9D985">
+            <Image Source="https://img.icons8.com/ios-glyphs/30/menu--v1.png" HorizontalAlignment="Left" Margin="10,0,0,0" Width="40"></Image>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFB2BD7E">
+            
+            <Rectangle  Name="RectMenu" MouseLeave="RectMenu_MouseLeave" MouseEnter="RectMenu_MouseEnter"
+                        Width="70" HorizontalAlignment="Left" Fill="#FF749C75"></Rectangle>
+            
+            <TextBlock Name="TextBlock1" HorizontalAlignment="Right" Margin="0,41,65,0"  Background="AntiqueWhite" Text="TextBlock" VerticalAlignment="Top" Height="38" Width="100"/>
+            <TextBlock Name="TextBlock2" HorizontalAlignment="Right" Margin="0,41,300,0" Background="AntiqueWhite" Text="TextBlock" VerticalAlignment="Top" Height="38" Width="100"/>
+            <TextBlock Name="TextBlock3" HorizontalAlignment="Right" Margin="0,41,553,0" Background="AntiqueWhite" Text="TextBlock" VerticalAlignment="Top" Height="38" Width="100"/>
+            <ListBox   Name="ListBox1"  HorizontalAlignment="Right" Height="200" Margin="0,135,56,0" VerticalAlignment="Top" Width="588" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FF6A5D7B" FontFamily="Times New Roman" FontSize="16" Foreground="White"/>
+          
+        </Grid>
+    </Grid>
+</Window>
